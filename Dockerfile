@@ -10,6 +10,8 @@ COPY lstm_model.h5 .
 
 COPY amazon_ts.py .
 
+COPY requirements.txt .
+
 RUN pip install --upgrade pip
 
 RUN pip install -r /app/requirements.txt
