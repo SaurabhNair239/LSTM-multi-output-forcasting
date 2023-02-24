@@ -12,7 +12,7 @@ COPY amazon_ts.py .
 
 RUN pip install --upgrade pip
 
-RUN pip install -r requirements.txt
+RUN pip install -r /app/requirements.txt
 
 EXPOSE $PORT
 
