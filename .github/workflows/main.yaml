@@ -36,10 +36,10 @@ jobs:
           heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
 
           # Access key id for the AWS S3 bucket
-          aws_access_key_id: ${{ secrets.aws_access_key_id}}
+          #aws_access_key_id: ${{ secrets.aws_access_key_id}}
 
           #Access key for the S3 bucket
-          aws_secret_access_key: ${{ secrets.aws_secret_access_key}}
+          #aws_secret_access_key: ${{ secrets.aws_secret_access_key}}
           # (Optional, default: "./")
           # Dockerfile directory.
           # For example, if you have a Dockerfile in the root of your project, leave it as follows:
