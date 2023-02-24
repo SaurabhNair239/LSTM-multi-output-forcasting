@@ -16,6 +16,10 @@ RUN pip install --upgrade pip
 
 RUN pip install -r /app/requirements.txt
 
+RUN chmod 0664 /etc/sron.d/crontab
+
+RUN crontab /etc/cron.d/crontab
+
 EXPOSE $PORT
 
 CMD worker python app.py
