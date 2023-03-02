@@ -18,4 +18,4 @@ RUN pip install -r /app/requirements.txt
 
 EXPOSE $PORT
 
-CMD worker python app.py
+CMD heroku run python /app/app.py
