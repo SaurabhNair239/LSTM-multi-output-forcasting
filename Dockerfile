@@ -18,6 +18,4 @@ RUN pip install -r /app/requirements.txt
 
 EXPOSE $PORT
 
-CMD web: python /app/app.py
-
-CMD worker: python /app/app.py 
+CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT  app:app 
