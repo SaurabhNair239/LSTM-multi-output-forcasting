@@ -10,10 +10,12 @@ COPY lstm_model.h5 .
 
 COPY amazon_ts.py .
 
+COPY app.py .
+
 COPY requirements.txt .
 
 RUN pip install --upgrade pip
 
 RUN pip install -r /app/requirements.txt
 
-CMD ["python", "app/app.py"]
+CMD ["python", "/app/app.py"]
