@@ -1,12 +1,12 @@
-import api_data_daily
-import s3_op
-import amazon_ts
+import /app/api_data_daily as adds
+import /app/s3_op as s3
+import /app/amazon_ts as ats
     
-api_data_daily.import_data_from_api()
+adds.import_data_from_api()
 
-s3_op.dump_file_to_s3("final_data.csv")
+s3.dump_file_to_s3("final_data.csv")
 
-amazon_ts.amazon_prediction()
+ats.amazon_prediction()
 
-s3_op.dump_file_to_s3("fut_data.csv")
+s3.dump_file_to_s3("fut_data.csv")
     
