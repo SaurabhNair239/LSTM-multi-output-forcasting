@@ -60,5 +60,11 @@ jobs:
           process_type: web
           
    
+      - name: execute py script # email-from-python.py
+        env: 
+          aws_access_key_id: ${{ secrets.aws_access_key_id}}
+          #Access key for the S3 bucket
+          aws_secret_access_key: ${{ secrets.aws_secret_access_key}}
+        run: python set_env_var.py
           
 ### ⬆ IMPORTANT PART ⬆ ###
