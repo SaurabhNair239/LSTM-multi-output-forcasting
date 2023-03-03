@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY api_data_daily.py .
 
+COPY .github/workflows/main.yaml main.yaml
+
 COPY s3_op.py .
 
 COPY lstm_model.h5 .
