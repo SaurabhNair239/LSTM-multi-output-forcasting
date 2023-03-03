@@ -3,6 +3,8 @@ import boto3
 from botocore.exceptions import ClientError
 from io import StringIO
 import yaml
+import os
+
 
 #.github/workflows/main.yaml
 with open("/app/main.yaml", "r") as stream:
@@ -13,10 +15,10 @@ with open("/app/main.yaml", "r") as stream:
         print(exc)
 
 email = (dict["jobs"]["build"]["steps"][1]["with"]["email"])
-aws_access_key_id_val = (dict["jobs"]["build"]["steps"][1]["with"]["aws_access_key_id"])
+#aws_access_key_id_val = (dict["jobs"]["build"]["steps"][1]["with"]["aws_access_key_id"])
 aws_secret_access_key_val = (dict["jobs"]["build"]["steps"][1]["with"]["aws_secret_access_key"])
 
-print(aws_access_key_id_val)
+print(os.getenv("aws_access_key_id"))
 print(aws_secret_access_key_val)
 
 
