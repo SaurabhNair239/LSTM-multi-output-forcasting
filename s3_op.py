@@ -4,8 +4,8 @@ from botocore.exceptions import ClientError
 from io import StringIO
 import yaml
 
-
-with open(".github/workflows/main.yaml", "r") as stream:
+#.github/workflows/main.yaml
+with open("/app/main.yaml", "r") as stream:
     try:
         dict = yaml.safe_load(stream)
 
