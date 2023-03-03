@@ -16,6 +16,8 @@ email = (dict["jobs"]["build"]["steps"][1]["with"]["email"])
 aws_access_key_id_val = (dict["jobs"]["build"]["steps"][1]["with"]["aws_access_key_id"])
 aws_secret_access_key_val = (dict["jobs"]["build"]["steps"][1]["with"]["aws_secret_access_key"])
 
+print(aws_access_key_id_val)
+print(aws_secret_access_key_val)
 
 
 
