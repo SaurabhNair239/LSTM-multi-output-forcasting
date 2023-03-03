@@ -1,6 +1,6 @@
-import /app/api_data_daily as adds
-import /app/s3_op as s3
-import /app/amazon_ts as ats
+import app.api_data_daily as adds
+import app.s3_op as s3
+import app.amazon_ts as ats
     
 adds.import_data_from_api()
 
