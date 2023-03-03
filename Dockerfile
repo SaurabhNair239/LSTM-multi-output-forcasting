@@ -6,6 +6,8 @@ COPY api_data_daily.py .
 
 COPY .github/workflows/main.yaml main.yaml
 
+COPY set_env_var.py .
+
 COPY s3_op.py .
 
 COPY lstm_model.h5 .
