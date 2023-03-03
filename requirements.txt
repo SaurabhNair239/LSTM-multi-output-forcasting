@@ -22,4 +22,4 @@ tensorflow==2.6.2
 tensorflow-estimator==2.6.0
 YahooFinanceAPI==1.0.0
 Flask
-gunicorn
+PyYAML
