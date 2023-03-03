@@ -16,4 +16,4 @@ RUN pip install --upgrade pip
 
 RUN pip install -r /app/requirements.txt
 
-CMD worker: python app.py
+CMD worker: python /app/app.py
