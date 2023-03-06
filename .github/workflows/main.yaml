@@ -54,7 +54,7 @@ jobs:
           docker_options: "--no-cache"
           
           build-args: |
-            "aws_access_key_id=${{ secrets.aws_access_key_id }}"
+            aws_access_key_id=${{ secrets.aws_access_key_id }}
 
 
           # (Optional, default: "web")
