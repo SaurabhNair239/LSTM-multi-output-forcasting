@@ -69,6 +69,7 @@ jobs:
           aws_access_key_id: ${{ secrets.aws_access_key_id}}
           #Access key for the S3 bucket
           aws_secret_access_key: ${{ secrets.aws_secret_access_key}}
-        run: python set_env_var.py
+          
+        run: docker build --build-arg aws_access_key_id=$aws_access_key_id .
           
 ### ⬆ IMPORTANT PART ⬆ ###
