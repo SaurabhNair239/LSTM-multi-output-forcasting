@@ -23,7 +23,7 @@ with open("/app/main.yaml", "r") as stream:
 
 
 aws_access_key_id_val = os.environ.get("aws_access_key_id")
-aws_secret_access_key_val = os.environ.get("aws_secret_access_key_val")
+aws_secret_access_key_val = os.environ.get("aws_secret_access_key")
 
 def create_bucket(bucket_name, region="eu-central-1"):
 
