@@ -1,9 +1,9 @@
 FROM python:3.6.9
 
 ARG aws_access_key_id
-ENV aws_access_key_id = ${aws_access_key_id}
+ENV aws_access_key_id ${aws_access_key_id}
 
-RUn echo ${aws_access_key_id}
+RUN echo ${aws_access_key_id}
 
 WORKDIR /app
 
