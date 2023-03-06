@@ -36,7 +36,7 @@ jobs:
           heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
 
           # Access key id for the AWS S3 bucket
-          --e aws_access_key_id: ${{ secrets.aws_access_key_id}}
+          aws_access_key_id: ${{ secrets.aws_access_key_id}}
 
           #Access key for the S3 bucket
           aws_secret_access_key: ${{ secrets.aws_secret_access_key}}
@@ -52,6 +52,10 @@ jobs:
           # (Optional, default: "")
           # Additional options of docker build command.
           docker_options: "--no-cache"
+          
+          build-args: |
+            "aws_access_key_id=${{ secrets.aws_access_key_id }}"
+
 
           # (Optional, default: "web")
           # Select the process type for which you want the docker container to be uploaded.
