@@ -52,9 +52,9 @@ jobs:
           # (Optional, default: "")
           # Additional options of docker build command.
           docker_options: "--no-cache"
-          
-          build-args: |
-            aws_access_key_id=${{ secrets.aws_access_key_id }}
+      
+          #build-args: |
+           # aws_access_key_id=${{ secrets.aws_access_key_id }}
 
 
           # (Optional, default: "web")
@@ -63,6 +63,7 @@ jobs:
           # For more information look at https://devcenter.heroku.com/articles/process-model
           process_type: web
           
+          run: docker build --build-arg aws_access_key_id=$aws_access_key_id aws_secret_access_key=$aws_secret_access_key .
    
       - name: execute py script # email-from-python.py
         env: 
@@ -70,6 +71,6 @@ jobs:
           #Access key for the S3 bucket
           aws_secret_access_key: ${{ secrets.aws_secret_access_key}}
           
-        run: docker build --build-arg aws_access_key_id=$aws_access_key_id .
+        run: docker build --build-arg aws_access_key_id=$aws_access_key_id aws_secret_access_key=$aws_secret_access_key.
           
 ### ⬆ IMPORTANT PART ⬆ ###
