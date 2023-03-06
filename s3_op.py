@@ -14,14 +14,16 @@ with open("/app/main.yaml", "r") as stream:
     except yaml.YAMLError as exc:
         print(exc)
 
-email = (dict["jobs"]["build"]["steps"][1]["with"]["email"])
+# email = (dict["jobs"]["build"]["steps"][1]["with"]["email"])
 #aws_access_key_id_val = (dict["jobs"]["build"]["steps"][1]["with"]["aws_access_key_id"])
-aws_secret_access_key_val = (dict["jobs"]["build"]["steps"][1]["with"]["aws_secret_access_key"])
+# aws_secret_access_key_val = (dict["jobs"]["build"]["steps"][1]["with"]["aws_secret_access_key"])
 
-print(os.getenv("aws_access_key_id"))
-print(aws_secret_access_key_val)
+# print(os.getenv("aws_access_key_id"))
+# print(aws_secret_access_key_val)
 
 
+aws_access_key_id_val = os.environ.get("aws_access_key_id")
+aws_secret_access_key_val = os.environ.get("aws_secret_access_key_val")
 
 def create_bucket(bucket_name, region="eu-central-1"):
 
