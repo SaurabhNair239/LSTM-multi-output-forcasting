@@ -3,18 +3,20 @@ FROM python:3.6.9
 ARG aws_access_key_id
 ARG aws_secret_access_key
 
-
-ENV aws_access_key_id = $aws_access_key_id
-ENV aws_secret_access_key ${aws_secret_access_key}
-
 RUN echo $aws_access_key_id
-RUN echo "$aws_secret_access_key"
+RUN echo $aws_secret_access_key
+
+ENV aws_access_key_id_val  $aws_access_key_id
+ENV aws_secret_access_key_val $aws_secret_access_key
+
+RUN echo $aws_access_key_id_val
+RUN echo $aws_secret_access_key_val
 
 WORKDIR /app
 
 COPY api_data_daily.py .
 
-COPY .github/workflows/main.yaml main.yaml
+#COPY .github/workflows/main.yaml main.yaml
 
 COPY set_env_var.py .
 
