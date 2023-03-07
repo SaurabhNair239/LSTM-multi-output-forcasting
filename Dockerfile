@@ -32,8 +32,8 @@ RUN pip install --upgrade pip
 
 RUN pip install -r /app/requirements.txt
 
-CMD ["python", "/app/app.py"]
+# CMD ["python", "/app/app.py"]
 
-# CMD ["python", "/app/set_env_var.py"]
+CMD ["python", "/app/set_env_var.py"]
 
 
