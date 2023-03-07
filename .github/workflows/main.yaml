@@ -80,7 +80,15 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           
           heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
-          usedocker: true
+          dockerfile_directory: ./
+
+          # (Optional, default: "Dockerfile")
+          # Dockerfile name.
+          dockerfile_name: Dockerfile
+
+          # (Optional, default: "")
+          # Additional options of docker build command.
+          docker_options: "--no-cache"         
           docker_build_args: |
             aws_access_key_id
             aws_secret_access_key
