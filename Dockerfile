@@ -18,7 +18,7 @@ COPY api_data_daily.py .
 
 #COPY .github/workflows/main.yaml main.yaml
 
-COPY set_env_var.py .
+# COPY set_env_var.py .
 
 COPY s3_op.py .
 
@@ -34,8 +34,8 @@ RUN pip install --upgrade pip
 
 RUN pip install -r /app/requirements.txt
 
-# CMD ["python", "/app/app.py"]
+CMD ["python", "/app/app.py"]
 
-CMD ["python", "/app/set_env_var.py"]
+# CMD ["python", "/app/set_env_var.py"]
 
 
