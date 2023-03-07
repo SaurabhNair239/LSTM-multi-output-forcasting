@@ -30,9 +30,10 @@ COPY app.py .
 
 COPY requirements.txt .
 
-RUN pip install --upgrade pip
+RUN PYTHONPATH=/usr/bin/python pip install --upgrade pip
 
-RUN pip install -r /app/requirements.txt
+RUN PYTHONPATH=/usr/bin/python pip install -r requirements.txt
+#RUN pip install -r /app/requirements.txt
 
 # CMD ["python", "/app/app.py"]
 
