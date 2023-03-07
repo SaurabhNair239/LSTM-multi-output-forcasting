@@ -1,4 +1,4 @@
-FROM python:3.6.9
+FROM python:3.6.9-alpine3.11
 
 ARG aws_access_key_id
 ARG aws_secret_access_key
