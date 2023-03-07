@@ -2,17 +2,17 @@ import logging
 import boto3
 from botocore.exceptions import ClientError
 from io import StringIO
-import yaml
+# import yaml
 import os
 
 
-#.github/workflows/main.yaml
-with open("/app/main.yaml", "r") as stream:
-    try:
-        dict = yaml.safe_load(stream)
+# #.github/workflows/main.yaml
+# with open("/app/main.yaml", "r") as stream:
+#     try:
+#         dict = yaml.safe_load(stream)
 
-    except yaml.YAMLError as exc:
-        print(exc)
+#     except yaml.YAMLError as exc:
+#         print(exc)
 
 # email = (dict["jobs"]["build"]["steps"][1]["with"]["email"])
 #aws_access_key_id_val = (dict["jobs"]["build"]["steps"][1]["with"]["aws_access_key_id"])
