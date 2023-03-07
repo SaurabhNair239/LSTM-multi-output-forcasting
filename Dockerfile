@@ -1,4 +1,4 @@
-FROM python:3.6.9-alpine
+FROM python:3.6.9
 
 ARG aws_access_key_id
 ARG aws_secret_access_key
@@ -30,10 +30,9 @@ COPY app.py .
 
 COPY requirements.txt .
 
-RUN PYTHONPATH=/usr/bin/python pip install --upgrade pip
+RUN pip install --upgrade pip
 
-RUN PYTHONPATH=/usr/bin/python pip install -r requirements.txt
-#RUN pip install -r /app/requirements.txt
+RUN pip install -r /app/requirements.txt
 
 # CMD ["python", "/app/app.py"]
 
