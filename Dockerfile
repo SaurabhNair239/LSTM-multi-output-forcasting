@@ -1,7 +1,4 @@
-FROM ubuntu
-
-RUN apt update
-RUN apt install python3 -y
+FROM python:3.6.9
 
 ARG aws_access_key_id
 ARG aws_secret_access_key
